@@ -2,6 +2,10 @@ package testCases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import pageObjects.LoginPage;
 
 public class TC_LoginTest_001 extends BaseClass {
@@ -9,6 +13,13 @@ public class TC_LoginTest_001 extends BaseClass {
 	@Test
 	public void LoginTest() throws InterruptedException
 	{
+		
+		//Extent report generate 
+		ExtentTest test = extent.createTest("MyLogin_LogoutTest", "Login_Logout");
+		test.log(Status.INFO, "This step shows usage of log(status, details)");
+		// info(details)
+		test.info("This step shows usage of info(details)");
+		//Extent report generate 
 		
 		driver.get(baseURL);
 		LoginPage lp=new LoginPage(driver);
@@ -27,6 +38,7 @@ public class TC_LoginTest_001 extends BaseClass {
 		else 
 		{
 			Assert.assertTrue(false);
+			log.info("Login and Logout validation test is done");
 		}
 		
 	}
