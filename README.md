@@ -1,5 +1,3 @@
-# POM_log_extent-report_java
-
 🔥 Website Testing Series useful for every Tester 🛑
 1. Test cases for Header: https://lnkd.in/dBSp8Q_4
 2. Test Cases for Footer: https://lnkd.in/d7-6_9d4
